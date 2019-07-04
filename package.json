@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint ./lib"
+    "lint": "./node_modules/.bin/eslint ./lib",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -27,11 +29,13 @@
   "homepage": "https://github.com/react-native-material-design/react-native-material-design",
   "dependencies": {
     "react-native-material-design-styles": "git+https://github.com/react-native-material-design/react-native-material-design-styles.git",
-    "react-native-vector-icons": "^2.0.1"
+    "react-native-vector-icons": "^2.0.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.6",
     "eslint": "^1.6.0",
     "eslint-plugin-react": "^3.5.1"
-  }
+  },
+  "snyk": true
 }
